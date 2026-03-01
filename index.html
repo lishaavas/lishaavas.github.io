@@ -3,43 +3,70 @@
 <head>
     <title>Lisha | C++ Developer</title>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(to right, #f8f9fa, #e9ecef);
-            color: #333;
+            background-color: #0f172a;
+            color: white;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            background-color: #111827;
+            padding: 15px;
+            text-align: center;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
         }
 
         header {
-            background-color: #1f2937;
-            color: white;
             text-align: center;
-            padding: 40px 20px;
+            padding: 120px 20px 60px;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 36px;
+            font-size: 40px;
+            margin-bottom: 10px;
         }
 
         header p {
-            margin-top: 10px;
             font-size: 18px;
-            opacity: 0.9;
+            color: #94a3b8;
         }
 
         section {
             max-width: 800px;
-            margin: 30px auto;
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin: 40px auto;
+            background-color: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
         }
 
         h2 {
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 8px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 10px;
         }
 
         ul {
@@ -48,70 +75,55 @@
 
         footer {
             text-align: center;
-            padding: 20px;
-            background: #1f2937;
-            color: white;
-            margin-top: 40px;
-        }
-
-        a {
-            color: #2563eb;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
+            padding: 30px;
+            color: #94a3b8;
         }
     </style>
 </head>
 
 <body>
 
+<nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
 <header>
     <h1>Hello, I'm Lisha 👋</h1>
-    <p>Aspiring C++ Developer | Software Engineer | Backend Enthusiast</p>
+    <p>Aspiring C++ Developer | Backend Engineer</p>
 </header>
 
-<section>
+<section id="about">
     <h2>About Me</h2>
     <p>
-        Software Engineer with 2.5 years of experience in backend development and automation testing.
-        Currently strengthening my C++ development skills and preparing for software developer roles.
-        Passionate about building efficient systems and continuously improving my technical foundation.
+        Software Engineer with 2.5 years of backend and automation experience.
+        Currently focused on mastering C++ development and system-level programming.
     </p>
 </section>
 
-<section>
+<section id="experience">
     <h2>Experience</h2>
     <ul>
-        <li>2.5 years experience in backend systems and automation testing</li>
-        <li>Worked on API-based systems and rule-driven logic</li>
-        <li>Experience with C programming and debugging</li>
+        <li>2.5 years in backend systems & automation testing</li>
+        <li>Worked on API-based systems and rule engines</li>
+        <li>Strong debugging and logical thinking skills</li>
     </ul>
 </section>
 
-<section>
+<section id="projects">
     <h2>Projects</h2>
     <ul>
-        <li><strong>Student Marks Evaluator (C++)</strong> – Console-based grading system</li>
-        <li><strong>Trading Rule Engine</strong> – Rule-based trading condition processor</li>
-        <li><strong>API Simulation App</strong> – Login + file handling + parsing system</li>
+        <li><strong>Student Marks Evaluator (C++)</strong></li>
+        <li><strong>Trading Rule Engine</strong></li>
+        <li><strong>API Simulation Console App</strong></li>
     </ul>
 </section>
 
-<section>
-    <h2>Achievements</h2>
-    <ul>
-        <li>First Runner-Up – Miss Karnataka Style Icon</li>
-        <li>Preparing for Miss Universe Karnataka</li>
-        <li>Built independent backend mini-projects</li>
-    </ul>
-</section>
-
-<section>
+<section id="contact">
     <h2>Contact</h2>
     <p>Email: your-email@gmail.com</p>
-    <p>LinkedIn: Add your link here</p>
 </section>
 
 <footer>
