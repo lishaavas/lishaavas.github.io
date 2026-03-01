@@ -12,19 +12,56 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #000000, #0f0f0f, #111827);
+            background-color: #000000;
             color: white;
         }
 
-        /* NAVIGATION */
+        /* ===== WELCOME PAGE ===== */
+        .welcome {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #000000, #111111);
+            text-align: center;
+        }
+
+        .welcome h1 {
+            font-size: 50px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .welcome p {
+            font-size: 18px;
+            color: #aaa;
+            margin-bottom: 40px;
+        }
+
+        .enter-btn {
+            padding: 12px 30px;
+            border: 1px solid white;
+            background: transparent;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .enter-btn:hover {
+            background: white;
+            color: black;
+        }
+
+        /* ===== NAVIGATION ===== */
         nav {
-            position: fixed;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            background: #0a0a0a;
             padding: 15px;
             text-align: center;
-            top: 0;
+            border-bottom: 1px solid #222;
             z-index: 1000;
         }
 
@@ -32,114 +69,79 @@
             color: #aaa;
             margin: 0 20px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 500;
             transition: 0.3s;
         }
 
         nav a:hover {
-            color: #38bdf8;
+            color: white;
         }
 
-        nav a.active {
-            color: #38bdf8;
-            border-bottom: 2px solid #38bdf8;
-            padding-bottom: 5px;
+        /* ===== MAIN CONTENT ===== */
+        .content {
+            padding-top: 40px;
         }
 
-        /* HEADER */
-        header {
-            text-align: center;
-            padding: 140px 20px 80px;
-        }
-
-        header h1 {
-            font-size: 45px;
-            margin-bottom: 10px;
-            background: linear-gradient(to right, #38bdf8, #a78bfa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        header p {
-            font-size: 18px;
-            color: #aaa;
-        }
-
-        /* SECTIONS */
         section {
             max-width: 900px;
-            margin: 60px auto;
+            margin: 80px auto;
             padding: 40px;
-            border-radius: 15px;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #222;
+            border-radius: 10px;
+            background-color: #0f0f0f;
+            transition: 0.3s ease;
         }
 
         section:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+            transform: translateY(-5px);
+            border-color: #444;
         }
 
         h2 {
-            border-bottom: 1px solid #333;
+            border-bottom: 1px solid #222;
             padding-bottom: 10px;
             margin-bottom: 20px;
         }
 
         ul {
-            padding-left: 20px;
             line-height: 1.8;
         }
 
         footer {
             text-align: center;
             padding: 40px;
-            color: #777;
+            color: #666;
         }
-
-        /* Fade Animation */
-        section {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeUp 0.8s ease forwards;
-        }
-
-        section:nth-child(1) { animation-delay: 0.2s; }
-        section:nth-child(2) { animation-delay: 0.4s; }
-        section:nth-child(3) { animation-delay: 0.6s; }
-        section:nth-child(4) { animation-delay: 0.8s; }
-
-        @keyframes fadeUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
     </style>
 </head>
 
 <body>
 
+<!-- ===== WELCOME SCREEN ===== -->
+<div class="welcome">
+    <h1>This is Lisha's World</h1>
+    <p>Welcome to my professional space</p>
+    <a href="#main">
+        <button class="enter-btn">Enter</button>
+    </a>
+</div>
+
+<!-- ===== MAIN WEBSITE ===== -->
+<div id="main" class="content">
+
 <nav>
-    <a href="#about">About</a>
+    <a href="#about">About Me</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <a href="#achievements">Achievements</a>
 </nav>
-
-<header>
-    <h1>Hello, I'm Lisha 👋</h1>
-    <p>Aspiring C++ Developer | Backend Engineer</p>
-</header>
 
 <section id="about">
     <h2>About Me</h2>
     <p>
         Software Engineer with 2.5 years of backend and automation experience.
-        Currently focused on mastering C++ development and system-level programming.
+        Currently mastering C++ and system-level development.
+        Passionate about building scalable and high-performance systems.
     </p>
 </section>
 
@@ -148,7 +150,7 @@
     <ul>
         <li>2.5 years in backend systems & automation testing</li>
         <li>Worked on API-based systems and rule engines</li>
-        <li>Strong debugging and logical thinking skills</li>
+        <li>Strong debugging & problem-solving skills</li>
     </ul>
 </section>
 
@@ -161,14 +163,20 @@
     </ul>
 </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your-email@gmail.com</p>
+<section id="achievements">
+    <h2>Achievements</h2>
+    <ul>
+        <li>Recognized for backend optimization improvements</li>
+        <li>Delivered automation solutions reducing manual effort</li>
+        <li>Continuous learning in C++ & system design</li>
+    </ul>
 </section>
 
 <footer>
     © 2026 Lisha | Built with GitHub Pages
 </footer>
+
+</div>
 
 </body>
 </html>
